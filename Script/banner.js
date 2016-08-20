@@ -12,5 +12,6 @@ var stage;
 
 function init(){
 stage = new createjs.Stage(canvas);
+var text = new createjs.Text("CreateJs CDN", "30px Verdana", "#000");
 
 }
