@@ -6,16 +6,36 @@
  * Purpose : script for banner ad
  */
 
-var MyCanvas=document.getElementById("canvas");
+var body=document.getElementById("body");
+body.addEventListener("load",init());
+var MyCanvas;
 var stage;
 
-
+/**
+ * @ function: init()
+ * @ purpose: to handle body load event
+ * @ void
+ */
 function init(){
+canvas=document.getElementById("canvas");
 stage = new createjs.Stage(canvas);
-var text = new createjs.Text("CreateJs CDN", "30px Verdana", "#000");
-text.x = 50;
-text.y = 50;
+var text = new createjs.Text("CreateJs CDN", "25px Verdana", "#000");
+text.x = 5;
+text.y = 220;
+text.regX=250*0.5;
+text.regY=250*0.5;
 stage.addChild(text);
-stage.update();
 
+}
+/**
+ * @ function: Looper()
+ * @ purpose: to handle the tick event
+ * @ void
+ */
+function Looper(){
+    text.x+=3;
+    if(text.x>400){
+        text.x=0;
+    }
+    stage.update();
 }

@@ -55,8 +55,10 @@ var texts = [
    var Message = document.getElementById("message");
 
    //a refrence to form
-   var contactForm = document.getElementById("Form");
-    
+   if(document.title="Contact Me"){
+var contactForm = document.getElementById("Form");
+   }
+   if(contactForm){
     contactForm.addEventListener("submit", function(event){
         event.preventDefault();
         console.log("First Name: " + FirstName.value);
@@ -65,4 +67,4 @@ var texts = [
         console.log("Contact Number: " + Contact.value);
         console.log("Message: " + Message.value);
         contactForm.reset();
-    });
+    });};
