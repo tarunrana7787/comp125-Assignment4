@@ -38,6 +38,7 @@ stage.addChild(picture);
  */
 function Looper(){
     text.x += 3;
+    picture.x+=3;
     // text.y+=3;
     if(text.x > 400){
         text.x=0;
