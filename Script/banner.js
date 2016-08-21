@@ -29,6 +29,7 @@ createjs.Ticker.framerate = 25;
 createjs.Ticker.addEventListener("tick", Looper);
 text.addEventListener("click", VisitLink, false);
 picture = new createjs.Bitmap("http://cdn.bleacherreport.net/images/team_logos/150x150/tennis.png");
+picture.x = 0;
 stage.addChild(picture);
 }
 /**
@@ -42,6 +43,7 @@ function Looper(){
     // text.y+=3;
     if(text.x > 400){
         text.x=0;
+        picture.x=0;
         // text.y=0;
     }
     stage.update();
