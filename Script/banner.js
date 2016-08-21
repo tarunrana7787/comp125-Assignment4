@@ -51,5 +51,5 @@ function Looper(){
  * @ void
  */
 function VisitLink(){
-    window.URL("http://studentweb.cencol.ca/trana5/Assignment3.html");
+    window.open("http://studentweb.cencol.ca/trana5/Assignment3.html");
 }
